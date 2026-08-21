@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- skill:chrome -->
+<style>
+/* Credit line — bottom-right */
+.design-ui-credit {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  font: 11px/1 system-ui, sans-serif;
+  color: rgba(128,128,128,0.5);
+  pointer-events: none;
+  z-index: 2147483647;
+  transition: opacity 0.4s ease;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+/* Hide chrome on touch devices */
+@media (hover: none) {
+  .design-ui-credit { display: none; }
+}
+
+/* Print fixes */
+@media print {
+  * {
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+  }
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .design-ui-credit { display: none !important; }
+}
+
+</style>
+<script>
+(function () {
+    // Design-ui pages are single compositions, so the whole body is editable.
+    function markEditable() {
+        document.body.classList.add('artifact-editable');
+    }
+
+    // Credit badge with idle-fade. Hover devices only.
+    function initChromeUI() {
+        if (!matchMedia('(hover: hover)').matches) return;
+
+        var credit = document.createElement('div');
+        credit.className = 'design-ui-credit';
+        credit.setAttribute('aria-hidden', 'true');
+        credit.innerHTML = '\u{1F49C} by ClickUp Brain';
+        document.body.appendChild(credit);
+
+        var timer = null;
+        var fade = function (out) { credit.style.opacity = out ? '0' : ''; };
+        fade(true);
+        var show = function () {
+            fade(false);
+            clearTimeout(timer);
+            timer = setTimeout(function () { fade(true); }, 3000);
+        };
+        document.addEventListener('mousemove', show);
+        show();
+    }
+
+    function init() {
+        markEditable();
+        initChromeUI();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+
+</script>
+<!-- /skill:chrome -->
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JL Corsine | Soluções em Óleo Hidráulica em Mandaguari-PR</title>
+<meta name="description" content="JL Corsine: mangueiras, conexões hidráulicas, filtros, cilindros pneumáticos e sistemas de lubrificação em Mandaguari, Paraná. Atendemos indústrias desde 1999.">
+<meta name="keywords" content="hidráulica, mangueiras, conexões, filtros, cilindros pneumáticos, lubrificação, Mandaguari, Paraná, indústria">
+<meta name="author" content="J. L. Corsine & Cia. Ltda">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.jlcorsine.com.br/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jlcorsine.com.br/">
+<meta property="og:title" content="JL Corsine | Soluções em Óleo Hidráulica">
+<meta property="og:description" content="Mangueiras, conexões hidráulicas, filtros, cilindros pneumáticos e sistemas de lubrificação em Mandaguari, Paraná.">
+<meta property="og:image" content="https://www.jlcorsine.com.br/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.jlcorsine.com.br/">
+<meta name="twitter:title" content="JL Corsine | Soluções em Óleo Hidráulica">
+<meta name="twitter:description" content="Mangueiras, conexões hidráulicas, filtros, cilindros pneumáticos e sistemas de lubrificação em Mandaguari, Paraná.">
+<meta name="twitter:image" content="https://www.jlcorsine.com.br/og-image.jpg">
+
+<!-- Preload de fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" as="style">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "J. L. Corsine & Cia. Ltda",
+  "alternateName": "JL Corsine",
+  "description": "Soluções em óleo hidráulica: mangueiras, conexões, filtros, cilindros pneumáticos e sistemas de lubrificação",
+  "url": "https://www.jlcorsine.com.br",
+  "telephone": "+554432332995",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Airton Senna, 58, Parque Industrial I",
+    "addressLocality": "Mandaguari",
+    "addressRegion": "PR",
+    "postalCode": "86975-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.2017,
+    "longitude": -51.6628
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "foundingDate": "1999",
+  "areaServed": {
+    "@type": "State",
+    "name": "Paraná"
+  },
+  "priceRange": "$$"
+}
+</script>
+<style>
+:root{--blue:oklch(48% .15 232);--blue-dark:oklch(27% .09 232);--blue-deep:oklch(19% .065 235);--blue-soft:oklch(94% .035 230);--cyan:oklch(67% .14 220);--white:oklch(99% .004 240);--ink:oklch(22% .025 235);--muted:oklch(49% .025 235);--line:oklch(88% .022 230);--max:min(1180px,calc(100% - 48px));--ease:cubic-bezier(.22,1,.36,1)}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;color:var(--ink);background:var(--white);font-family:Manrope,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.02;letter-spacing:-.045em;text-wrap:balance;margin:0}p{margin:0;text-wrap:pretty}a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;display:block}.container{width:var(--max);margin:auto}.eyebrow{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--blue)}.eyebrow.light{color:var(--cyan)}.eyebrow:before{content:'';display:inline-block;width:24px;height:2px;background:currentColor;vertical-align:middle;margin:0 10px 3px 0}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:4px;font-size:.87rem;font-weight:800;border:1px solid transparent;transition:transform .2s var(--ease),background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease)}.btn:hover{transform:translateY(-2px)}.btn-blue{background:var(--blue);color:var(--white)}.btn-blue:hover{background:var(--blue-dark)}.btn-white{background:var(--white);color:var(--blue-dark)}.btn-white:hover{background:var(--blue-soft)}.btn-outline{border-color:var(--line);color:var(--ink)}.btn-outline:hover{border-color:var(--blue);color:var(--blue)}.dark-outline{border-color:oklch(92% .02 230 / .38);color:var(--white)}.dark-outline:hover{border-color:var(--white)}:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+header{height:82px;position:sticky;top:0;z-index:30;background:color-mix(in oklch,var(--white) 95%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s var(--ease)}header.scrolled{border-color:var(--line)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:11px}.logo-svg{width:50px;height:50px;flex:none}.brand-name{font-family:'Space Grotesk';font-weight:700;font-size:1.27rem;letter-spacing:-.06em;color:var(--ink)}.brand-sub{display:block;font-size:.53rem;letter-spacing:.055em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:2px}.navlinks{display:flex;gap:31px;align-items:center;font-size:.86rem;font-weight:700;color:var(--muted)}.navlinks a{transition:color .2s var(--ease)}.navlinks a:hover{color:var(--blue)}.nav-cta{display:flex;align-items:center;gap:12px}.menu{display:none;border:0;background:transparent;color:var(--ink);font-size:1.4rem;padding:8px}
+.hero{background:var(--blue-deep);color:var(--white);overflow:hidden;position:relative}.hero:after{content:'';position:absolute;inset:0;background-image:linear-gradient(oklch(95% .02 230 / .09) 1px,transparent 1px),linear-gradient(90deg,oklch(95% .02 230 / .09) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(90deg,black,transparent 85%);pointer-events:none}.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:95px 0 110px;min-height:670px}.hero h1{font-size:clamp(3.1rem,6vw,6.25rem);max-width:8ch;margin:17px 0 26px}.hero h1 em{font-style:normal;color:var(--cyan)}.hero-copy{font-size:1.06rem;line-height:1.75;color:oklch(90% .024 230);max-width:49ch}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.hero-meta{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid oklch(93% .02 230 / .2);margin-top:53px;padding-top:18px;color:oklch(78% .022 230);font-size:.78rem}.hero-meta b{display:block;color:var(--white);font-size:.95rem;margin-bottom:2px}.hero-visual{height:455px;position:relative}.visual-box{position:absolute;inset:24px 0 5px 10px;border:1px solid oklch(89% .025 230 / .38);background:oklch(29% .09 233 / .5);transform:skewY(-4deg)}.visual-box:before,.visual-box:after{content:'';position:absolute;border:1px solid oklch(80% .08 220 / .4);border-radius:50%;width:245px;height:245px;right:30px;top:82px}.visual-box:after{width:160px;height:160px;right:72px;top:124px;border-color:var(--cyan)}.pipe{position:absolute;height:48px;border:5px solid var(--cyan);border-radius:0 35px 35px 0;transform:skewY(4deg)}.pipe-a{width:250px;top:88px;left:53px}.pipe-b{width:170px;top:208px;left:152px;border-color:var(--white);height:65px}.pipe-c{width:245px;top:326px;left:70px;border-color:var(--cyan);height:70px}.node{position:absolute;width:14px;height:14px;background:var(--cyan);border-radius:50%;box-shadow:0 0 0 7px oklch(66% .14 220 / .12)}.node-a{left:46px;top:80px}.node-b{right:72px;top:303px}.node-c{left:67px;top:391px}.machine-label{position:absolute;color:var(--cyan);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800}.label-a{left:55px;top:39px}.label-b{right:20px;bottom:30px}.tech-tag{position:absolute;right:17px;top:22px;border:1px solid oklch(89% .025 230 / .32);padding:8px 11px;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:oklch(85% .022 230)}
+.about{background:var(--blue-soft);padding:116px 0 100px}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.about h2{font-size:clamp(2.4rem,4.5vw,4.4rem);max-width:9ch;margin-top:18px}.about-copy{padding-top:27px;font-size:1.12rem;color:var(--muted);line-height:1.8}.about-copy p+p{margin-top:20px}.rule{height:1px;background:var(--line);margin-top:48px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}.stat strong{font-family:'Space Grotesk';font-size:2.3rem;color:var(--blue);display:block;letter-spacing:-.06em}.stat span{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;line-height:1.3}
+.products{padding:116px 0 126px}.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:60px}.section-top h2{font-size:clamp(2.4rem,4.2vw,4.2rem);max-width:10ch;margin-top:17px}.section-top p{max-width:34ch;color:var(--muted);font-size:.97rem}.product-list{border-top:1px solid var(--line)}.product{display:grid;grid-template-columns:65px 1fr 1fr auto;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:padding .25s var(--ease),background .25s var(--ease)}.product:hover{padding-inline:18px;background:var(--blue-soft)}.num{font-family:'Space Grotesk';font-weight:700;color:var(--blue);font-size:1rem}.product h3{font-size:1.3rem;letter-spacing:-.03em}.product p{color:var(--muted);font-size:.89rem;max-width:38ch}.arrow{font-size:1.45rem;color:var(--blue);transition:transform .2s var(--ease)}.product:hover .arrow{transform:translateX(5px)}
+.difference{background:var(--blue);color:var(--white);padding:112px 0}.difference-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}.difference h2{font-size:clamp(2.5rem,4.6vw,4.8rem);max-width:9ch;margin:17px 0 25px}.difference p{color:oklch(92% .02 230);font-size:1.04rem;line-height:1.75}.checks{display:grid;gap:15px;margin-top:36px}.check{display:flex;gap:13px;align-items:flex-start}.check i{width:19px;height:19px;flex:none;border:1px solid var(--cyan);border-radius:50%;margin-top:3px;position:relative}.check i:after{content:'';position:absolute;width:6px;height:3px;border-left:2px solid var(--cyan);border-bottom:2px solid var(--cyan);transform:rotate(-45deg);left:5px;top:5px}.check span{font-size:.92rem;color:oklch(92% .02 230)}.quote{padding:44px;background:var(--blue-dark);border:1px solid oklch(95% .02 230 / .25);position:relative}.quote:before{content:'“';font:7rem/1 Georgia;position:absolute;top:-31px;left:27px;color:var(--cyan)}.quote p{font-family:'Space Grotesk';font-size:clamp(1.45rem,2.5vw,2.3rem);line-height:1.08;letter-spacing:-.05em}.quote small{display:block;margin-top:28px;color:var(--cyan);font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800}
+.contact{padding:110px 0 120px}.contact-grid{display:grid;grid-template-columns:1fr .85fr;gap:85px}.contact h2{font-size:clamp(2.5rem,5vw,5rem);max-width:8ch;margin:17px 0 25px}.contact-lead{font-size:1.1rem;color:var(--muted);max-width:43ch;line-height:1.7}.contact-list{margin-top:44px;border-top:1px solid var(--line)}.contact-item{display:flex;gap:17px;padding:19px 0;border-bottom:1px solid var(--line);font-size:.9rem}.contact-item strong{width:92px;flex:none;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--blue)}.contact-item span{color:var(--muted)}.contact-panel{background:var(--blue-deep);color:var(--white);padding:39px;border-radius:5px;align-self:start}.contact-panel h3{font-size:2rem;max-width:11ch;margin:14px 0 17px}.contact-panel p{color:oklch(89% .02 230);font-size:.92rem;line-height:1.7}.contact-panel .btn{width:100%;margin-top:28px}.maps{display:inline-block;margin-top:20px;color:var(--cyan);font-size:.83rem;text-decoration:underline;text-underline-offset:4px}
+footer{background:var(--ink);color:var(--white);padding:52px 0 25px}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:start}.footer-brand p{color:oklch(77% .022 230);font-size:.85rem;max-width:31ch;margin-top:15px}.footer-links{display:flex;gap:34px;flex-wrap:wrap}.footer-links a{color:oklch(84% .02 230);font-size:.83rem}.footer-links a:hover{color:var(--cyan)}.footer-bottom{border-top:1px solid oklch(75% .02 230 / .2);margin-top:48px;padding-top:18px;color:oklch(71% .02 230);font-size:.73rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){.navlinks{display:none}.navlinks.open{display:flex;position:absolute;top:81px;left:0;right:0;background:var(--white);padding:25px 24px;flex-direction:column;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line)}.nav-cta>.btn{display:none}.menu{display:block}.hero-inner,.about-grid,.difference-grid,.contact-grid{grid-template-columns:1fr;gap:48px}.hero-inner{padding:75px 0 95px}.hero-visual{height:400px}.about{padding:86px 0 78px}.products{padding:85px 0}.section-top{display:block}.section-top p{margin-top:20px}.product{grid-template-columns:44px 1fr auto}.product p{grid-column:2/4}.difference{padding:83px 0}.contact{padding:83px 0}.footer-top{display:block}.footer-links{margin-top:30px}}
+@media(max-width:540px){:root{--max:calc(100% - 32px)}header,.nav{height:70px}.navlinks.open{top:69px}.brand-name{font-size:1.08rem}.brand-sub{font-size:.46rem}.logo-svg{width:44px;height:44px}.hero h1{font-size:3.2rem}.hero-visual{height:330px;transform:scale(.72);transform-origin:center;margin:-35px -80px}.hero-meta{gap:15px}.product{grid-template-columns:34px 1fr}.product p{grid-column:2}.arrow{grid-column:2}.stats{gap:12px}.stat strong{font-size:1.75rem}.contact-panel{padding:28px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}}
+
+/* WhatsApp Button */
+.whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:50;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 20px;border-radius:50px;font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}.whatsapp-float:hover{transform:scale(1.05);box-shadow:0 6px 28px rgba(37,211,102,.5)}.whatsapp-float svg{width:28px;height:28px;flex:none}.whatsapp-pulse{animation:whatsappPulse 2s infinite}@keyframes whatsappPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 20px rgba(37,211,102,.6),0 0 0 12px rgba(37,211,102,.1)}}
+@media(max-width:540px){.whatsapp-float{bottom:16px;right:16px;padding:12px 16px;font-size:.82rem}.whatsapp-float svg{width:24px;height:24px}}
+
+/* Scroll Reveal Animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+<header id="header"><div class="container nav"><a href="#inicio" class="brand" aria-label="JL Corsine, início"><svg class="logo-svg" viewBox="0 0 100 100" role="img" aria-label="Logo JL Corsine"><path d="M28 12h44c15 0 24 10 24 24v27H40" fill="none" stroke="oklch(48% .15 232)" stroke-width="9" stroke-linecap="square"/><path d="M72 88H28C13 88 4 78 4 63V36h56" fill="none" stroke="oklch(48% .15 232)" stroke-width="9" stroke-linecap="square"/></svg><span><span class="brand-name">JL Corsine</span><span class="brand-sub">Soluções em Óleo Hidráulica</span></span></a><nav class="navlinks" id="navlinks"><a href="#empresa">Empresa</a><a href="#produtos">Produtos</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a></nav><div class="nav-cta"><a class="btn btn-blue" href="#contato">Solicite um orçamento</a><button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button></div></div></header>
+<main>
+<section class="hero" id="inicio"><div class="container hero-inner"><div><div class="eyebrow light">Mandaguari, Paraná</div><h1>Qualidade que <em>conecta</em> e movimenta</h1><p class="hero-copy">Soluções hidráulicas e pneumáticas para manter sua operação funcionando. Mangueiras, conexões, filtros, cilindros e sistemas sob medida.</p><div class="hero-actions"><a class="btn btn-blue" href="#contato">Solicite seu orçamento ↗</a><a class="btn dark-outline" href="#produtos">Conheça os produtos</a></div><div class="hero-meta"><span><b>27 anos</b>de experiência</span><span><b>Desde 1999</b>em Mandaguari</span><span><b>(44) 3233-2995</b>atendimento direto</span></div></div><div class="hero-visual" aria-label="Diagrama técnico de sistema hidráulico"><div class="visual-box"><span class="pipe pipe-a"></span><span class="pipe pipe-b"></span><span class="pipe pipe-c"></span><i class="node node-a"></i><i class="node node-b"></i><i class="node node-c"></i><span class="machine-label label-a">sistema em operação</span><span class="machine-label label-b">pressão / fluxo / controle</span><span class="tech-tag">JL / hidráulica</span></div></div></div></section>
+<section class="about" id="empresa"><div class="container about-grid"><div><div class="eyebrow">Por que a JL Corsine?</div><h2>Precisão e competência a seu serviço</h2></div><div class="about-copy"><p>Quando uma máquina para, o tempo importa. A JL Corsine atende a indústria com peças e soluções hidráulicas pensadas para o trabalho real: reposição rápida, montagem correta e suporte de quem entende do assunto.</p><p>Em Mandaguari desde 1999, construímos nossa história com atendimento próximo, qualidade nos componentes e compromisso com cada conexão entregue.</p><div class="rule"></div><div class="stats"><div class="stat"><strong>27</strong><span>anos de experiência</span></div><div class="stat"><strong>1999</strong><span>ano de fundação</span></div><div class="stat"><strong>PR</strong><span>atuação regional</span></div></div></div></div></section>
+<section class="products" id="produtos"><div class="container"><div class="section-top"><div><div class="eyebrow">Produtos e serviços</div><h2>Do componente ao sistema completo</h2></div><p>Uma linha completa para hidráulica industrial, pneumática, lubrificação e segurança operacional.</p></div><div class="product-list"><a class="product" href="#contato"><span class="num">01</span><h3>Mangueiras e conexões hidráulicas</h3><p>Peças para condução de fluidos, montagem e reposição para diferentes aplicações.</p><span class="arrow">↗</span></a><a class="product" href="#contato"><span class="num">02</span><h3>Lubrificação centralizada</h3><p>Montagem de sistemas que distribuem lubrificante com mais controle e regularidade.</p><span class="arrow">↗</span></a><a class="product" href="#contato"><span class="num">03</span><h3>Cilindros pneumáticos</h3><p>Componentes e soluções para automação e acionamento de equipamentos.</p><span class="arrow">↗</span></a><a class="product" href="#contato"><span class="num">04</span><h3>Filtros hidráulicos</h3><p>Filtragem e proteção para ajudar a preservar o desempenho do sistema.</p><span class="arrow">↗</span></a><a class="product" href="#contato"><span class="num">05</span><h3>Abraçadeiras e dispositivos de segurança</h3><p>Fixação, proteção e organização para linhas hidráulicas e pneumáticas.</p><span class="arrow">↗</span></a><a class="product" href="#contato"><span class="num">06</span><h3>Paleteiras hidráulicas manuais</h3><p>Venda e suporte para movimentação de cargas no ambiente industrial.</p><span class="arrow">↗</span></a></div></div></section>
+<section class="difference" id="diferenciais"><div class="container difference-grid"><div><div class="eyebrow light">Nossa forma de trabalhar</div><h2>Parceria em cada conexão</h2><p>Não entregamos só uma peça. Entendemos o que sua operação precisa e indicamos a solução mais segura para evitar retrabalho e novas paradas.</p><div class="checks"><div class="check"><i></i><span>Atendimento técnico e direto, sem burocracia</span></div><div class="check"><i></i><span>Soluções para indústria, manutenção e equipamentos</span></div><div class="check"><i></i><span>Experiência construída em 27 anos de mercado</span></div></div></div><div class="quote"><p>“A diferença está nos detalhes: na peça certa, na montagem correta e no suporte quando você precisa.”</p><small>JL Corsine, soluções em óleo hidráulica</small></div></div></section>
+<section class="contact" id="contato"><div class="container contact-grid"><div><div class="eyebrow">Solicite seu orçamento</div><h2>Seu projeto, nossa dedicação</h2><p class="contact-lead">Conte o que você precisa. Nossa equipe retorna com uma orientação clara para o seu caso.</p><div class="contact-list"><div class="contact-item"><strong>Telefone</strong><span>(44) 3233-2995</span></div><div class="contact-item"><strong>Endereço</strong><span>Rua Airton Senna, 58, Parque Industrial I<br>Mandaguari, PR, CEP 86975-000</span></div><div class="contact-item"><strong>Empresa</strong><span>J. L. Corsine & Cia. Ltda<br>CNPJ 03.128.298/0001-08</span></div></div></div><div class="contact-panel"><div class="eyebrow light">Vamos conversar</div><h3>Tem uma peça ou projeto em mãos?</h3><p>Ligue para a JL Corsine e fale diretamente com a equipe para solicitar uma cotação.</p><a class="btn btn-white" href="tel:+554432332995">Ligar agora: (44) 3233-2995</a><a class="maps" href="https://www.google.com/maps/search/?api=1&query=Rua+Airton+Senna,+58,+Parque+Industrial+I,+Mandaguari+PR" target="_blank" rel="noopener">Abrir localização no Maps ↗</a></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-top"><div class="footer-brand"><a href="#inicio" class="brand"><svg class="logo-svg" viewBox="0 0 100 100" aria-hidden="true"><path d="M28 12h44c15 0 24 10 24 24v27H40" fill="none" stroke="oklch(67% .14 220)" stroke-width="9" stroke-linecap="square"/><path d="M72 88H28C13 88 4 78 4 63V36h56" fill="none" stroke="oklch(67% .14 220)" stroke-width="9" stroke-linecap="square"/></svg><span><span class="brand-name" style="color:var(--white)">JL Corsine</span><span class="brand-sub" style="color:oklch(78% .02 230)">Soluções em Óleo Hidráulica</span></span></a><p>Qualidade que conecta e movimenta a indústria do Paraná.</p></div><div class="footer-links"><a href="#empresa">Empresa</a><a href="#produtos">Produtos e serviços</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a></div></div><div class="footer-bottom"><span>© 2026 J. L. Corsine & Cia. Ltda.</span><span>Mandaguari, Paraná · (44) 3233-2995</span></div></div></footer>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/554432332995?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="whatsapp-float whatsapp-pulse" aria-label="Fale conosco pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  WhatsApp
+</a>
+
+<script>const h=document.getElementById('header');addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>10),{passive:true});const m=document.getElementById('menu'),n=document.getElementById('navlinks');m.addEventListener('click',()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');m.setAttribute('aria-expanded','false')}));
+
+// Scroll Reveal Animation
+const revealElements=document.querySelectorAll('.eyebrow,.hero h1,.hero-copy,.hero-actions,.hero-meta,.about h2,.about-copy,.stat,.product,.difference h2,.difference p,.check,.quote,.contact h2,.contact-lead,.contact-item,.contact-panel');
+const revealObserver=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -50px 0px'});
+revealElements.forEach((el,i)=>{el.classList.add('reveal');if(i%3===1)el.classList.add('reveal-delay-1');if(i%3===2)el.classList.add('reveal-delay-2');revealObserver.observe(el)});
+
+// Parallax subtle on hero visual
+const heroVisual=document.querySelector('.hero-visual');if(heroVisual){addEventListener('scroll',()=>{const s=scrollY;if(s<800){heroVisual.style.transform='translateY('+s*.08+'px)'}},{passive:true})}
+</script>
+</body></html>
